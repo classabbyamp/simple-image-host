@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Upload file</h1>
+<p>Valid filetypes: {{ conf.exts|join(", ") }}</p>
+<p>Maximum filesize: {{ conf.max_filesize / (1024 * 1024) }} MB</p>
+    <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <br>
+        <input type=checkbox name=rename id=rename>
+        <label for=rename>Rename file?</label>
+        <br>
+        <input type=submit value=Upload>
+    </form>
+{% endblock %}
