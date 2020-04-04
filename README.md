@@ -1,5 +1,14 @@
 # simple-image-host
 
+This is an *exceedingly* simple app.
+
+* User authentication via HTTP basic auth
+* Web upload (for registered users only)
+    * visit `{domain}/` for this
+* File type and size restrictions
+    * You can bypass the upload restrictions by using a docker volume and uploading to the host server
+* Direct links to uploaded files
+    * `{domain}/{filename}`
 
 ## Example `conf.py`
 
